@@ -1,0 +1,16 @@
+.theme-2 {
+  /*Backgrounds*/
+  --colorFondo1: hsl(0, 0%, 90%);
+  --colorFondo2: hsl(0, 5%, 81%);
+  --colorFondo3: hsl(0, 0%, 93%);
+  /*keys*/
+  --colorBtn1: hsl(185, 42%, 37%);
+  --colorBtn1s: hsl(185, 58%, 25%);
+  --colorBtn2: hsl(25, 98%, 40%);
+  --colorBtn2s: hsl(25, 99%, 27%);
+  --colorBtn3: hsl(45, 7%, 89%);
+  --colorBtn3s: hsl(35, 11%, 61%);
+  /*text*/
+  --colorText1: hsl(60, 10%, 19%);
+  --colorText2: #ffffff;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style/main.css" />
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+
+  <body>
+    <div id="container" class="container">
+      <div class="calc-container">
+        <div class="calc-header">
+          <div class="calc-title">calc</div>
+          <div class="calc-switch-theme">
+            <span>theme</span>
+            <div class="calc-switch-main">
+              <div class="calc-switch-span">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              <div id="calc-switch"  class="calc-switch-controller">
+                <div class="calc-switch-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="calc-result" id="calc-result"></div>
+        <div class="calc-groud-input">
+          <button class="btn btn-number" id="btn-7">7</button>
+          <button class="btn btn-number" id="btn-8">8</button>
+          <button class="btn btn-number" id="btn-9">9</button>
+          <button class="btn" id="btn-del">del</button>
+          <button class="btn btn-number" id="btn-4">4</button>
+          <button class="btn btn-number" id="btn-5">5</button>
+          <button class="btn btn-number" id="btn-6">6</button>
+          <button class="btn btn-txt" id="btn-suma">+</button>
+          <button class="btn btn-number" id="btn-1">1</button>
+          <button class="btn btn-number" id="btn-2">2</button>
+          <button class="btn btn-number" id="btn-3">3</button>
+          <button class="btn btn-txt" id="btn-resta">-</button>
+          <button class="btn btn-txt" id="btn-punto">.</button>
+          <button class="btn btn-number" id="btn-0">0</button>
+          <button class="btn btn-txt" id="btn-barra">/</button>
+          <button class="btn btn-txt" id="btn-equis">x</button>
+          <button class="btn" id="btn-reset">reset</button>
+          <button class="btn btn-txt" id="btn-calcular">=</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./javascript/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;600;700&display=swap");
+@import url(./theme/theme1.css);
+@import url(theme/theme2.css);
+@import url(theme/theme3.css);
+* {
+  margin: 0;
+  transition: all 500ms;
+}
+
+:root {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  box-sizing: border-box;
+  --borRadio: 5px;
+
+}
+
+html,
+body {
+  padding: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Layout Main Container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--colorFondo1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .calc-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  row-gap: 1.3rem;
+}
+
+/* HEADER*/
+.calc-header {
+  color: var(--colorText2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.theme-2 .calc-header {
+  color: var(--colorText1);
+}
+.theme-3 .calc-header {
+  color: var(--colorText1);
+}
+.calc-header .calc-title {
+  font-size: 2rem;
+}
+.calc-header .calc-switch-theme {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  vertical-align: middle;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+.calc-switch-theme .calc-switch-main {
+  width: 3.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.calc-switch-main .calc-switch-span {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: -80%;
+}
+
+.calc-switch-main .calc-switch-controller {
+  width: 100%;
+  height: 1.3rem;
+  padding: 0 0.18rem;
+  border-radius: 10px;
+  background-color: var(--colorFondo2);
+  display: flex;
+  align-items: center;
+}
+.calc-switch-controller .calc-switch-circle {
+  background-color: var(--colorBtn2);
+  border-radius: 50%;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+}
+
+.theme-1 .calc-switch-controller {
+  justify-content: flex-start !important;
+}
+.theme-2 .calc-switch-controller {
+  justify-content: center !important;
+}
+.theme-3 .calc-switch-controller {
+  justify-content: flex-end !important;
+}
+/* calc-result */
+
+.calc-result {
+  width: calc(100% - 2rem);
+  height: 60px;
+  word-spacing: 5px;
+  background-color: var(--colorFondo3);
+  white-space: nowrap;
+  overflow-x: auto !important;
+  border-radius: var(--borRadio);
+  font-size: 32px;
+  color: var(--colorText2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 1rem;
+}
+.theme-2 .calc-result {
+  color: var(--colorText1);
+}
+/* calc-groud-input */
+.calc-groud-input {
+  border-radius: var(--borRadio);
+  background-color: var(--colorFondo2);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "a b c d"
+    "a b c d"
+    "a b c d"
+    "a b c d"
+    "reset reset igual igual";
+  gap: 0.7rem;
+}
+.calc-groud-input > button {
+  outline: none;
+  width: 100%;
+  height: 3rem;
+  margin: 0;
+  padding: 0 2rem;
+  border: 0;
+  background: 0%;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: var(--borRadio);
+}
+.calc-groud-input .btn-number {
+  font-size: 32px;
+}
+.calc-groud-input .btn-txt {
+  font-size: 18px;
+}
+.calc-groud-input .btn {
+  color: var(--colorText1);
+  text-transform: uppercase;
+  background-color: var(--colorBtn3);
+  box-shadow: 2px 3px 0px 0px var(--colorBtn3s);
+  -webkit-box-shadow: 2px 3px 0px 0px var(--colorBtn3s);
+  -moz-box-shadow: 2px 3px 0px 0px var(--colorBtn3s);
+}
+.calc-groud-input .btn:active {
+  box-shadow: 2px 3px 0px 0px var(--colorBtn3s) inset;
+  -webkit-box-shadow: 2px 3px 0px 0px var(--colorBtn3s) inset;
+  -moz-box-shadow: 2px 3px 0px 0px var(--colorBtn3s) inset;
+  transform: scale(0.98);
+}
+.calc-groud-input #btn-del {
+  background-color: var(--colorBtn1);
+  box-shadow: 2px 3px 0px 0px var(--colorBtn1s);
+  -webkit-box-shadow: 2px 3px 0px 0px var(--colorBtn1s);
+  -moz-box-shadow: 2px 3px 0px 0px var(--colorBtn1s);
+  color: var(--colorText2);
+}
+.calc-groud-input #btn-del:active {
+  box-shadow: 2px 3px 0px 0px var(--colorBtn1s) inset;
+  -webkit-box-shadow: 2px 3px 0px 0px var(--colorBtn1s) inset;
+  -moz-box-shadow: 2px 3px 0px 0px var(--colorBtn1s) inset;
+  transform: scale(0.98);
+}
+
+.calc-groud-input #btn-calcular {
+  grid-area: igual;
+  background-color: var(--colorBtn2);
+  box-shadow: 2px 3px 0px 0px var(--colorBtn2s);
+  -webkit-box-shadow: 2px 3px 0px 0px var(--colorBtn2s);
+  -moz-box-shadow: 2px 3px 0px 0px var(--colorBtn2s);
+  color: var(--colorText2);
+}
+.calc-groud-input #btn-calcular:active {
+  box-shadow: 2px 3px 0px 0px var(--colorBtn2s) inset;
+  -webkit-box-shadow: 2px 3px 0px 0px var(--colorBtn2s) inset;
+  -moz-box-shadow: 2px 3px 0px 0px var(--colorBtn2s) inset;
+  transform: scale(0.98);
+}
+.calc-groud-input #btn-reset {
+  background-color: var(--colorBtn1);
+  color: var(--colorText2);
+  box-shadow: 2px 3px 0px 0px var(--colorBtn1s);
+  -webkit-box-shadow: 2px 3px 0px 0px var(--colorBtn1s);
+  -moz-box-shadow: 2px 3px 0px 0px var(--colorBtn1s);
+  grid-area: reset;
+}
+.calc-groud-input #btn-reset:active {
+  box-shadow: 2px 3px 0px 0px var(--colorBtn1s) inset;
+  -webkit-box-shadow: 2px 3px 0px 0px var(--colorBtn1s) inset;
+  -moz-box-shadow: 2px 3px 0px 0px var(--colorBtn1s) inset;
+  transform: scale(0.98);
+}
+
+
+/* resposive  */
+@media only screen and (max-width: 375px) {
+  .calc-groud-input > button{
+    height: 65px;
+    padding: 0rem 1.1rem;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .calc-groud-input > button{
+    height: 40px;
+    padding: 0rem 1.1rem;
+  }
+}
